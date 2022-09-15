@@ -6,8 +6,10 @@ import jobsData from './data.json'
 
 
 function App() {
-  const [jobs, setJobs] = useState(jobsData)
+  const [jobs, setJobs] = useState([])
   const [filters, setFilters] = useState([])
+
+  useEffect(() => { setJobs(jobsData) }, [])
 
   const filterFunc = ({role, level, languages, tools}) => {
     if (filters.length === 0) return true
