@@ -46,7 +46,7 @@ const Jobs = ({ handleTag,
 
       <div className="jobs-tags">
         {tags.map((tag, i) => (
-          <span key={i} id={tag} onClick={() => handleTag(tag)} className='tag'>{tag}</span>
+          <span key={i} onClick={() => handleTag(tag)} className='tag'>{tag}</span>
         ))}
       </div>
     </div>
