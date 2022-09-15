@@ -1,24 +1,47 @@
-import logo from './logo.svg';
-import './App.css';
+import { useEffect, useState } from 'react';
+import Jobs from './components/Jobs'
+import Header from './components/Header'
+import jobsData from './data.json'
+
+
 
 function App() {
+  const [jobs, setJobs] = useState(jobsData)
+  const [filters, setFilters] = useState([])
+
+  const filterFunc = ({role, level, languages, tools}) => {
+    if (filters.length === 0) return true
+
+    const tags = [role, level]
+
+    if (languages) tags.push(...languages)
+    if (tools) tags.push(...tools)
+
+    return tags.some(tag => filters.includes(tag))
+  }
+
+  const handleTag = (tag) => {
+    if(filters.includes(tag)) return
+    setFilters([...filters, tag])
+  }
+
+  console.log(filters)
+
+  const filteredJobs = jobs.filter(filterFunc)
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <main className="App">
+      <Header filters={filters} setFilters={setFilters} />
+      <div className='jobs container'>
+        {filteredJobs.map(job => (
+          <Jobs 
+            job={job} 
+            key={job.id} 
+            handleTag={handleTag} 
+          />
+        ))}
+      </div>
+    </main>
   );
 }
 

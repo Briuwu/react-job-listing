@@ -1,0 +1,14 @@
+.header {
+  position: relative;
+  background-color: $desaturated-dark-cyan;
+  background-image: url('/public/images/bg-header-mobile.svg');
+  background-repeat: no-repeat;
+  padding: 7em;
+  background-size: cover;
+}
+
+@media (min-width: 700px) {
+  .header {
+    background-image: url('/public/images/bg-header-desktop.svg');
+  }
+}

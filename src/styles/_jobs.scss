@@ -1,0 +1,165 @@
+.jobs {
+  margin-block: 7em;
+  display: flex;
+  flex-direction: column;
+  gap: 5em;
+
+  &-desc {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25em;
+  }
+
+  &-filter {
+    box-shadow: rgba(91, 164, 164, 0.3) 0px 7px 29px 0px;
+    border-radius: 0.5em;
+    position: absolute;
+    background-color: $light-grayish-cyan-filter;
+    padding: 1em;
+    bottom: -30px;
+    left: 0;
+    right: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &-tag {
+      display: flex;
+      gap: 1em;
+      flex-wrap: wrap;
+    }
+
+    span {
+      display: flex;
+      align-items: center;
+      gap: 0.5em;
+      padding: 0;
+      padding-left: 0.5em;
+      border-radius: .25em;
+
+      &:hover {
+        color: $desaturated-dark-cyan;
+        background-color: hsla(180, 29%, 50%, 0.2);
+      }
+
+      img {
+        background-color: $desaturated-dark-cyan;
+        padding: 0.75em;
+        border-top-right-radius: 0.25em;
+        border-bottom-right-radius: 0.25em;
+
+        &:hover {
+          background-color: $very-dark-grayish-cyan;
+        }
+
+      }
+    }
+
+    button {
+      cursor: pointer;
+      background: none;
+      border: none;
+      color: $dark-grayish-cyan;
+      font-weight: 700;
+    }
+  }
+
+  &-each {
+    position: relative;
+    background-color: $light-grayish-cyan-filter;
+    box-shadow: rgba(91, 164, 164, 0.3) 0px 7px 29px 0px;
+    padding: 2em 2em;
+    border-radius: 0.5em;
+
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+  }
+
+  &-img {
+    position: absolute;
+    top: -40px;
+    width: 66px;
+  }
+
+  &-company {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: .5em;
+    color: $desaturated-dark-cyan;
+    font-weight: 700;
+
+    span {
+      text-transform: uppercase;
+      padding: 0.25em 0.75em;
+      border-radius: 1em;
+    }
+
+    :nth-child(1) {
+      margin-left: 1em;
+      background-color: $desaturated-dark-cyan;
+      color: $light-grayish-cyan-filter;
+    }
+
+    :nth-child(2) {
+      background-color: $very-dark-grayish-cyan;
+      color: $light-grayish-cyan-filter;
+    }
+  }
+
+  &-position {
+    cursor: pointer;
+    font-weight: 700;
+
+    &:hover {
+      color: $desaturated-dark-cyan;
+    }
+  }
+
+  &-info {
+    display: flex;
+    gap: 0.5em;
+    color: $dark-grayish-cyan;
+  }
+
+  &-tags {
+    margin-top: 1em;
+    border-top: 1px solid $dark-grayish-cyan;
+    padding-top: 1em;
+
+    display: flex;
+    gap: 1em;
+    flex-wrap: wrap;
+  }
+}
+
+@media (min-width: 700px) {
+  .jobs {
+    font-size: 1rem;
+
+    &-filter {
+      padding: 2em;
+    }
+
+    &-img {
+      position: inherit;
+      inset: 0;
+    }
+
+    &-each {
+      flex-direction: row;
+      align-items: center;
+      gap: 2em;
+    }
+
+    &-tags {
+      margin-left: auto;
+      border: none;
+      padding-top: 0;
+      margin-top: 0;
+      align-items: center;
+    }
+  }
+}
