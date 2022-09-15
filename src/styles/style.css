@@ -165,7 +165,7 @@ body {
 }
 .jobs-each {
   position: relative;
-  background-color: hsl(180deg, 31%, 95%);
+  background-color: white;
   box-shadow: rgba(91, 164, 164, 0.3) 0px 7px 29px 0px;
   padding: 2em 2em;
   border-radius: 0.5em;
