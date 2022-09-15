@@ -135,7 +135,7 @@ body {
   gap: 1em;
   flex-wrap: wrap;
 }
-.jobs-filter span {
+.jobs-filter p {
   display: flex;
   align-items: center;
   gap: 0.5em;
@@ -143,17 +143,17 @@ body {
   padding-left: 0.5em;
   border-radius: 0.25em;
 }
-.jobs-filter span:hover {
+.jobs-filter p:hover {
   color: hsl(180deg, 29%, 50%);
   background-color: hsla(180deg, 29%, 50%, 0.2);
 }
-.jobs-filter span img {
+.jobs-filter p img {
   background-color: hsl(180deg, 29%, 50%);
   padding: 0.75em;
   border-top-right-radius: 0.25em;
   border-bottom-right-radius: 0.25em;
 }
-.jobs-filter span img:hover {
+.jobs-filter p img:hover {
   background-color: hsl(180deg, 14%, 20%);
 }
 .jobs-filter button {
@@ -186,7 +186,7 @@ body {
   color: hsl(180deg, 29%, 50%);
   font-weight: 700;
 }
-.jobs-company span {
+.jobs-company p {
   color: white;
   text-transform: uppercase;
   padding: 0.25em 0.75em;
@@ -224,6 +224,7 @@ body {
 
 @media (min-width: 700px) {
   .jobs {
+    gap: 2em;
     font-size: 1rem;
   }
   .jobs-filter {

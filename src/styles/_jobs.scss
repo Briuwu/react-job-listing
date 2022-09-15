@@ -30,7 +30,7 @@
       flex-wrap: wrap;
     }
 
-    span {
+    p {
       display: flex;
       align-items: center;
       gap: 0.5em;
@@ -91,7 +91,7 @@
     color: $desaturated-dark-cyan;
     font-weight: 700;
 
-    span {
+    p {
       color: white;
       text-transform: uppercase;
       padding: 0.25em 0.75em;
@@ -138,6 +138,7 @@
 
 @media (min-width: 700px) {
   .jobs {
+    gap: 2em;
     font-size: 1rem;
 
     &-filter {
