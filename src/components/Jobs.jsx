@@ -31,22 +31,22 @@ const Jobs = ({ handleTag,
       <div className='jobs-desc'>
         <p className='jobs-company'>
           {company}
-          {isNew && <p>New!</p>}
-          {featured && <p>Featured</p>}
+          {isNew && <span>New!</span>}
+          {featured && <span>Featured</span>}
         </p>
 
         <p className="jobs-position">{position}</p>
 
         <div className="jobs-info">
-          <p>{postedAt}</p>
-          <p>{contract}</p>
-          <p>{location}</p>
+          <span>{postedAt}</span>
+          <span>{contract}</span>
+          <span>{location}</span>
         </div>
       </div>
 
       <div className="jobs-tags">
         {tags.map((tag, i) => (
-          <p key={i} onClick={() => handleTag(tag)} className='tag'>{tag}</p>
+          <span key={i} onClick={() => handleTag(tag)} className='tag'>{tag}</span>
         ))}
       </div>
     </div>

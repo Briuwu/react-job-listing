@@ -30,7 +30,7 @@
       flex-wrap: wrap;
     }
 
-    p {
+    span {
       display: flex;
       align-items: center;
       gap: 0.5em;
@@ -40,7 +40,7 @@
 
       &:hover {
         color: $desaturated-dark-cyan;
-        background-color: hsla(180, 29%, 50%, 0.2);
+        background-color: hsla(180, 29%, 50%, 0.1);
       }
 
       img {
@@ -91,7 +91,7 @@
     color: $desaturated-dark-cyan;
     font-weight: 700;
 
-    p {
+    span {
       color: white;
       text-transform: uppercase;
       padding: 0.25em 0.75em;
@@ -123,6 +123,7 @@
     display: flex;
     gap: 0.5em;
     color: $dark-grayish-cyan;
+    font-weight: 700;
   }
 
   &-tags {

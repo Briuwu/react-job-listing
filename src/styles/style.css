@@ -80,7 +80,7 @@ body {
 }
 
 .tag {
-  background-color: hsla(180deg, 29%, 50%, 0.2);
+  background-color: hsla(180deg, 29%, 50%, 0.1);
   color: hsl(180deg, 29%, 50%);
   font-weight: 700;
   padding: 0.5em;
@@ -135,7 +135,7 @@ body {
   gap: 1em;
   flex-wrap: wrap;
 }
-.jobs-filter p {
+.jobs-filter span {
   display: flex;
   align-items: center;
   gap: 0.5em;
@@ -143,17 +143,17 @@ body {
   padding-left: 0.5em;
   border-radius: 0.25em;
 }
-.jobs-filter p:hover {
+.jobs-filter span:hover {
   color: hsl(180deg, 29%, 50%);
-  background-color: hsla(180deg, 29%, 50%, 0.2);
+  background-color: hsla(180deg, 29%, 50%, 0.1);
 }
-.jobs-filter p img {
+.jobs-filter span img {
   background-color: hsl(180deg, 29%, 50%);
   padding: 0.75em;
   border-top-right-radius: 0.25em;
   border-bottom-right-radius: 0.25em;
 }
-.jobs-filter p img:hover {
+.jobs-filter span img:hover {
   background-color: hsl(180deg, 14%, 20%);
 }
 .jobs-filter button {
@@ -186,7 +186,7 @@ body {
   color: hsl(180deg, 29%, 50%);
   font-weight: 700;
 }
-.jobs-company p {
+.jobs-company span {
   color: white;
   text-transform: uppercase;
   padding: 0.25em 0.75em;
@@ -212,6 +212,7 @@ body {
   display: flex;
   gap: 0.5em;
   color: hsl(180deg, 8%, 52%);
+  font-weight: 700;
 }
 .jobs-tags {
   margin-top: 1em;

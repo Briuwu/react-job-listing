@@ -16,7 +16,7 @@ const JobsFilter = ({filters, setFilters}) => {
       <div className="jobs-filter container">
         <div className="jobs-filter-tag">
           {filters.map(tag => (
-            <p onClick={() => handleFilter(tag)} className='tag'>{tag} <img src={cross} alt="" /></p>
+            <span onClick={() => handleFilter(tag)} className='tag'>{tag} <img src={cross} alt="" /></span>
           ))}
         </div>
         <button onClick={handleClear}>Clear</button>
