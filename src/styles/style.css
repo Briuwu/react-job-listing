@@ -187,6 +187,7 @@ body {
   font-weight: 700;
 }
 .jobs-company span {
+  color: white;
   text-transform: uppercase;
   padding: 0.25em 0.75em;
   border-radius: 1em;
